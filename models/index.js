@@ -6,8 +6,8 @@ const Sequelize = require('sequelize');
 // Initialisation de Sequelize avec les paramètres de connexion à la base de données
 const basename = path.basename(__filename);
 const sequelize = new Sequelize('artisans', 'root', 'root', {
-  host: 'localhost',
-  port: 8889,
+  host: 'b1zi1uqac7yqttcvrgcr-mysql.services.clever-cloud.com',
+  port: 3306,
   dialect: 'mysql',
   logging: false,
 });
