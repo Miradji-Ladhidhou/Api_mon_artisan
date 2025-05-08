@@ -21,7 +21,7 @@ const limiter = rateLimit({
 
 // Définition des options CORS autorisant le frontend à communiquer avec le backend
 const corsOptions = {
-  origin: 'b1zi1uqac7yqttcvrgcr-mysql.services.clever-cloud.com', 
+  origin: 'https://api-mon-artisan.onrender.com', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 };
@@ -50,5 +50,5 @@ sequelize.authenticate()
 
 // Lancement du serveur Express
 app.listen(port, () => {
-  console.log(`Serveur API démarré sur ${port}`);
+  console.log(`Serveur API démarré sur http://localhost:${port}`);
 });

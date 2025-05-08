@@ -4,17 +4,16 @@ const { Sequelize } = require("sequelize");
 require("dotenv").config();
 
 // Configuration de la connexion à la base de données en utilisant les variables d'environnement.
-const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
-  {
+module.exports = {
+  development: {
+    username: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
     host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    dialect: process.env.DB_DIALECT,
-    logging: false, 
+    port: process.env.DB_PORT || 3306,
+    dialect: process.env.DB_DIALECT || 'mysql'
   }
-);
+};
 
 // Vérification de la connexion à la base de données.
 sequelize.authenticate()
