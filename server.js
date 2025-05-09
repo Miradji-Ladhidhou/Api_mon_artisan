@@ -32,7 +32,7 @@ const limiter = rateLimit({
 
 // Définition des options CORS autorisant le frontend à communiquer avec le backend
 const corsOptions = {
-  origin: 'https://api-mon-artisan.onrender.com', 
+  origin: 'http://localhost:3000', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 };
@@ -61,5 +61,5 @@ sequelize.authenticate()
 
 // Lancement du serveur Express
 app.listen(port, () => {
-  console.log(`Serveur API démarré sur http://localhost:${port}`);
+  console.log(`Serveur API démarré sur ${port}`);
 });
