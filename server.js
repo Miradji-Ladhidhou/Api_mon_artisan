@@ -10,6 +10,9 @@ const artisans = require('./routes/artisans');
 const app = express();
 const port = process.env.PORT || 3001;
 
+// Middleware pour servir les fichiers statiques (images, CSS, JS)
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Configuration de la sécurité avec Helmet
 app.use(
   helmet.contentSecurityPolicy({
