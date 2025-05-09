@@ -32,7 +32,7 @@ const limiter = rateLimit({
 
 // Définition des options CORS autorisant le frontend à communiquer avec le backend
 const corsOptions = {
-  origin: 'http://localhost:3000', 
+  origin: 'https://trouve-ton-artisan-75bn.onrender.com', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 };
